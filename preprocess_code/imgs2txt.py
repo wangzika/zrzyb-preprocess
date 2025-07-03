@@ -16,7 +16,7 @@ for filename in os.listdir(input_folder_path):
     if filename.endswith('.png') or filename.endswith('.jpg') or filename.endswith('.jpeg'):
         # 讀取圖像文件
         img = cv2.imread(os.path.join(input_folder_path, filename), cv2.IMREAD_GRAYSCALE)
-        # 將二值圖反轉，使前景為白色，背景為黑色
+        # 將二值圖反轉，使前景為白色，背景為黑色   ########
         # img = cv2.bitwise_not(img)
         # 找到前景的輪廓
         contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
