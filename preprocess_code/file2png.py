@@ -1,3 +1,5 @@
+#数据切分：将裁剪后的shp文件与对应的tiff遥感影像对齐，并切分为512x512的训练样本。具体来说tiff影像转为jpg,shp文件转为二值图
+
 #前提条件shp，tiff文件在一个文件夹下
 import os
 import geopandas as gpd
