@@ -1,3 +1,6 @@
+# 将二值图转为txt文本文件：具体将目标框保留中心点，以及长和宽。
+
+
 import geopandas as gpd
 import pyproj
 from osgeo import gdal,ogr
@@ -54,7 +57,7 @@ for tiff_file in tiff_files:
 
     # 将SHP文件的坐标系转换为投影坐标系
     gdf=gdf.to_crs(target_crs)
-    # 获取TIFF文件的边界范围
+    # 获取TIFF文件的边界范围  ##########
     left, width, _, top, _, height = dataset.GetGeoTransform()
     right = left + (width * dataset.RasterXSize)
     bottom = top + (height * dataset.RasterYSize)
